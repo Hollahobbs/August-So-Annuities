@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protect Part of Your Retirement — Fixed &amp; Indexed Annuities Explained | August So</title>
+<meta name="description" content="A clear, no-pressure look at how annuities can protect part of your retirement savings from market drops while leaving room to grow. Schedule a free call.">
+<meta property="og:title" content="Protect Part of Your Retirement Savings — Without Leaving the Market Entirely">
+<meta property="og:description" content="See how fixed and fixed indexed annuities work, how they grow, and how they protect — in plain language.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0E2635;
+    --navy-mid:#173B4F;
+    --navy-soft:#2A5069;
+    --ivory:#F7F3EA;
+    --ivory-dim:#EFE8D6;
+    --brass:#B08D57;
+    --brass-light:#DFC090;
+    --sea:#6FA79C;
+    --sea-dark:#3E6E66;
+    --ink:#152025;
+    --ink-soft:#4C5B62;
+    --white:#FFFFFF;
+    --red-muted:#B36A5E;
+    --shadow:0 20px 50px -25px rgba(14,38,53,0.45);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    line-height:1.12;
+    margin:0;
+    color:var(--navy-deep);
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;letter-spacing:0.02em;}
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin-bottom:14px;
+    display:inline-block;
+  }
+  .eyebrow.on-dark{color:var(--brass-light);}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:1.02rem;
+    padding:17px 30px;
+    border-radius:100px;
+    text-decoration:none;
+    cursor:pointer;
+    border:none;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .btn-primary{
+    background:var(--brass);
+    color:var(--navy-deep);
+    box-shadow:0 14px 30px -12px rgba(176,141,87,0.65);
+  }
+  .btn-primary:hover{transform:translateY(-2px); background:var(--brass-light); box-shadow:0 18px 36px -12px rgba(176,141,87,0.75);}
+  .btn-ghost{
+    background:transparent;
+    border:1.5px solid rgba(247,243,234,0.4);
+    color:var(--ivory);
+  }
+  .btn-ghost:hover{border-color:var(--ivory); background:rgba(247,243,234,0.08);}
+  .btn small{display:block;font-weight:500;font-size:0.72rem;opacity:0.75;font-family:'Inter';}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:rgba(14,38,53,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(247,243,234,0.08);
+  }
+  .topbar .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:14px; padding-bottom:14px;
+  }
+  .brand{display:flex; align-items:center; gap:10px; color:var(--ivory); font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem;}
+  .brand-mark{width:30px;height:30px;flex-shrink:0;}
+  .topbar .btn-primary{padding:11px 20px; font-size:0.88rem;}
+  .topbar-cta-text{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:linear-gradient(180deg,var(--navy-deep) 0%,var(--navy-mid) 100%);
+    color:var(--ivory);
+    overflow:hidden;
+    padding:72px 0 0;
+  }
+  .hero .wrap{
+    max-width:760px;
+    padding-bottom:56px;
+    padding-top:12px;
+    position:relative;
+    z-index:2;
+  }
+  .hero h1{color:var(--ivory); font-size:clamp(2.3rem,4.2vw,3.4rem);}
+  .hero h1 em{font-style:italic; color:var(--brass-light);}
+  .hero-sub{
+    font-size:1.1rem;
+    color:rgba(247,243,234,0.82);
+    max-width:46ch;
+    margin:22px 0 30px;
+  }
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:14px; align-items:center;}
+  .hero-note{
+    margin-top:16px;
+    font-size:0.85rem;
+    color:rgba(247,243,234,0.55);
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .sun{transform-origin:center; animation:glow 6s ease-in-out infinite;}
+  .wave{animation:drift 9s ease-in-out infinite;}
+  .wave.w2{animation-duration:12s; animation-delay:-3s;}
+  .wave.w3{animation-duration:15s; animation-delay:-6s;}
+  @keyframes glow{0%,100%{opacity:1;} 50%{opacity:.78;}}
+  @keyframes drift{0%,100%{transform:translateX(0);} 50%{transform:translateX(10px);}}
+
+  /* ---------- Sections ---------- */
+  section{padding:96px 0;}
+  .section-ivory-dim{background:var(--ivory-dim);}
+  .section-navy{background:var(--navy-deep); color:var(--ivory);}
+  .section-navy h2{color:var(--ivory);}
+  .kicker-row{max-width:640px; margin:0 auto 56px; text-align:center;}
+  .kicker-row h2{font-size:clamp(1.8rem,3vw,2.4rem);}
+  .kicker-row p{margin-top:16px; color:var(--ink-soft); font-size:1.05rem;}
+  .section-navy .kicker-row p{color:rgba(247,243,234,0.75);}
+
+  .trio{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .card{
+    background:var(--white);
+    border-radius:var(--radius);
+    padding:34px 28px;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(14,38,53,0.06);
+  }
+  .card .icon{width:46px; height:46px; margin-bottom:20px;}
+  .card h3{font-size:1.2rem; margin-bottom:12px;}
+  .card p{color:var(--ink-soft); font-size:0.98rem;}
+
+  /* How it grows / protects — split rows */
+  .split-row{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+    margin-bottom:88px;
+  }
+  .split-row:last-child{margin-bottom:0;}
+  .split-row.reverse .split-media{order:2;}
+  .split-row.reverse .split-text{order:1;}
+  .split-row.single-col{
+    grid-template-columns:1fr;
+    max-width:660px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+  }
+  .split-text h3{font-size:1.7rem; margin-bottom:16px;}
+  .split-text p{color:var(--ink-soft); margin-bottom:14px;}
+  .split-text ul{margin:18px 0 0; padding:0; list-style:none;}
+  .split-text li{
+    display:flex; gap:12px; padding:10px 0;
+    border-top:1px solid rgba(14,38,53,0.08);
+    font-size:0.96rem; color:var(--ink);
+  }
+  .split-text li:first-of-type{border-top:none;}
+  .split-text li svg{flex-shrink:0; width:20px; height:20px; margin-top:2px;}
+  .split-media{
+    background:var(--ivory);
+    border-radius:24px;
+    padding:36px;
+    box-shadow:var(--shadow);
+  }
+
+  /* Signature chart */
+  .chart-panel{
+    background:var(--navy-mid);
+    border-radius:24px;
+    padding:44px clamp(20px,4vw,52px);
+    box-shadow:var(--shadow);
+  }
+  .chart-legend{display:flex; gap:26px; flex-wrap:wrap; margin-top:22px;}
+  .legend-item{display:flex; align-items:center; gap:9px; font-size:0.88rem; color:rgba(247,243,234,0.85);}
+  .legend-swatch{width:22px; height:4px; border-radius:2px;}
+  #floorPath{stroke-dasharray:900; stroke-dashoffset:900; transition:stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1);}
+  #marketPath{stroke-dasharray:900; stroke-dashoffset:900; transition:stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1) .2s;}
+  .chart-panel.in-view #floorPath,
+  .chart-panel.in-view #marketPath{stroke-dashoffset:0;}
+
+  /* Checklist */
+  .checklist{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:44px;}
+  .check-item{
+    display:flex; gap:16px; align-items:flex-start;
+    background:var(--white); border-radius:14px; padding:22px 22px;
+    border:1px solid rgba(14,38,53,0.08);
+  }
+  .check-mark{
+    width:28px; height:28px; border-radius:50%; flex-shrink:0;
+    background:var(--sea); display:flex; align-items:center; justify-content:center;
+  }
+  .check-mark svg{width:15px; height:15px;}
+  .check-item p{font-size:0.98rem; color:var(--ink);}
+
+  /* Slider / allocation interactive */
+  .allocation-panel{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;
+    background:var(--white); border-radius:24px; padding:clamp(28px,4vw,52px);
+    box-shadow:var(--shadow);
+  }
+  .donut-wrap{display:flex; flex-direction:column; align-items:center; gap:18px;}
+  .donut{
+    width:230px; height:230px; border-radius:50%;
+    background:conic-gradient(var(--brass) 0% var(--pct,45%), var(--sea) var(--pct,45%) 100%);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    transition:background .15s linear;
+  }
+  .donut::after{
+    content:"";
+    width:65%; height:65%; border-radius:50%;
+    background:var(--white);
+    position:absolute;
+  }
+  .donut-center{position:relative; z-index:2; text-align:center;}
+  .donut-center .big{font-family:'Fraunces',serif; font-size:2.1rem; color:var(--navy-deep); font-weight:600;}
+  .donut-center .small{font-size:0.78rem; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+  .donut-legend{display:flex; gap:20px;}
+  .donut-legend .legend-item{color:var(--ink-soft);}
+  .donut-legend .legend-swatch{height:12px; width:12px; border-radius:50%;}
+
+  .slider-block label{
+    display:block; font-family:'IBM Plex Mono',monospace; font-size:0.82rem;
+    text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); margin-bottom:14px;
+  }
+  input[type="range"]{
+    width:100%; -webkit-appearance:none; appearance:none;
+    height:6px; border-radius:6px;
+    background:linear-gradient(90deg,var(--brass) 0%, var(--brass) var(--pct,45%), var(--ivory-dim) var(--pct,45%), var(--ivory-dim) 100%);
+    outline:none;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none; appearance:none;
+    width:26px; height:26px; border-radius:50%;
+    background:var(--navy-deep); border:4px solid var(--brass-light); cursor:pointer;
+    margin-top:0;
+  }
+  input[type="range"]::-moz-range-thumb{
+    width:26px; height:26px; border-radius:50%;
+    background:var(--navy-deep); border:4px solid var(--brass-light); cursor:pointer; border:none;
+  }
+  .allocation-caption{margin-top:20px; font-size:1rem; color:var(--ink); min-height:52px;}
+  .allocation-caption strong{color:var(--navy-deep);}
+  .allocation-disclaimer{margin-top:14px; font-size:0.78rem; color:var(--ink-soft); font-style:italic;}
+
+  /* FAQ */
+  .faq-list{max-width:760px; margin:44px auto 0;}
+  details{
+    background:var(--white); border-radius:14px; padding:6px 26px;
+    margin-bottom:12px; border:1px solid rgba(14,38,53,0.08);
+  }
+  summary{
+    cursor:pointer; list-style:none; padding:20px 0;
+    font-family:'Fraunces',serif; font-weight:500; font-size:1.05rem; color:var(--navy-deep);
+    display:flex; justify-content:space-between; align-items:center; gap:20px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  .plus{
+    width:22px; height:22px; flex-shrink:0; position:relative;
+  }
+  .plus::before,.plus::after{
+    content:""; position:absolute; background:var(--brass);
+    top:50%; left:50%; transform:translate(-50%,-50%);
+  }
+  .plus::before{width:16px; height:2px;}
+  .plus::after{width:2px; height:16px; transition:transform .25s ease;}
+  details[open] .plus::after{transform:translate(-50%,-50%) rotate(90deg); opacity:0;}
+  details p{color:var(--ink-soft); padding-bottom:22px; font-size:0.98rem; max-width:64ch;}
+
+  /* Final CTA */
+  .final-cta{
+    background:linear-gradient(135deg,var(--navy-deep),var(--navy-soft));
+    color:var(--ivory); border-radius:28px; padding:clamp(36px,5vw,64px);
+    display:grid; grid-template-columns:auto 1fr auto; gap:40px; align-items:center;
+  }
+  .agent-avatar{width:88px; height:88px; border-radius:50%; flex-shrink:0;}
+  .final-cta h2{color:var(--ivory); font-size:clamp(1.5rem,2.6vw,2rem); margin-bottom:10px;}
+  .final-cta p{color:rgba(247,243,234,0.75); max-width:48ch;}
+
+  /* Footer */
+  footer{background:var(--navy-deep); color:rgba(247,243,234,0.55); padding:56px 0 110px;}
+  footer .wrap{max-width:900px;}
+  footer p{font-size:0.8rem; line-height:1.7; margin-bottom:14px;}
+  footer .foot-brand{color:var(--ivory); font-family:'Fraunces',serif; font-size:1.1rem; margin-bottom:18px; display:block;}
+
+  /* Sticky mobile CTA */
+  .sticky-cta{
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:var(--navy-deep); padding:14px 18px;
+    box-shadow:0 -10px 30px rgba(0,0,0,0.25);
+    display:none;
+  }
+  .sticky-cta .btn{width:100%; justify-content:center;}
+
+  /* Reveal animation */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion:reduce){
+    .sun,.wave,.reveal,#floorPath,#marketPath{animation:none !important; transition:none !important; opacity:1 !important; transform:none !important; stroke-dashoffset:0 !important;}
+  }
+
+  @media (max-width:900px){
+    .trio{grid-template-columns:1fr;}
+    .split-row{grid-template-columns:1fr; gap:30px;}
+    .split-row.reverse .split-media{order:1;} .split-row.reverse .split-text{order:2;}
+    .checklist{grid-template-columns:1fr;}
+    .allocation-panel{grid-template-columns:1fr;}
+    .final-cta{grid-template-columns:1fr; text-align:center; justify-items:center;}
+    .sticky-cta{display:block;}
+    section{padding:64px 0;}
+    body{padding-bottom:0;}
+    .topbar .btn-primary span.full{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" stroke="#DFC090" stroke-width="1.5"/>
+        <path d="M16 8 L16 24 M9 24 L23 24 M11 24 L11 17 L21 17 L21 24" stroke="#DFC090" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      August So <span style="opacity:.5;font-weight:400;">— Retirement Income Planning</span>
+    </div>
+    <a class="btn btn-primary" href="https://calendly.com/augustso520/retirement-income-tax-planning-call-with-august-so" target="_blank" rel="noopener"><span class="full">Schedule a Call</span></a>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">For those 5&ndash;15 years from retirement</span>
+      <h1>Protect part of what you've built.<br>Keep <em>room to grow</em> the rest.</h1>
+      <p class="hero-sub">A plain-language look at how fixed and fixed indexed annuities can shield a portion of your retirement savings from market drops — without asking you to move everything out of the market.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://calendly.com/augustso520/retirement-income-tax-planning-call-with-august-so" target="_blank" rel="noopener">
+          Schedule Your Free Call
+        </a>
+        <a class="btn btn-ghost" href="#how-it-works">See how it works ↓</a>
+      </div>
+      <p class="hero-note">15&ndash;20 min on Zoom · No cost · No obligation · Licensed in Arizona</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT IS AN ANNUITY ============ -->
+<section id="how-it-works">
+  <div class="wrap">
+    <div class="kicker-row reveal">
+      <span class="eyebrow">The basics</span>
+      <h2>What an annuity actually is</h2>
+      <p>Strip away the sales language and it's a fairly simple idea: a contract between you and an insurance company, built around protection and, often, income.</p>
+    </div>
+    <div class="trio">
+      <div class="card reveal">
+        <svg class="icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#B08D57" stroke-width="2"/><path d="M6 18h36" stroke="#B08D57" stroke-width="2"/><path d="M14 26h8M14 31h14" stroke="#B08D57" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>A contract, not a stock</h3>
+        <p>You put in a lump sum or series of payments. In exchange, the insurance company contractually agrees to specific protections and, if you choose, future income.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M24 6l16 8v10c0 11-7 17-16 20-9-3-16-9-16-20V14l16-8z" stroke="#6FA79C" stroke-width="2" stroke-linejoin="round"/><path d="M17 24l5 5 10-11" stroke="#6FA79C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Not directly in the market</h3>
+        <p>With a fixed indexed annuity, your premium isn't invested in stocks. Interest credited is instead linked to how an index performs — with protections built in.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="#B08D57" stroke-width="2"/><path d="M24 15v9l7 4" stroke="#B08D57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Built for the long game</h3>
+        <p>These are long-term contracts, often with a surrender-charge period. They're generally a fit for money you don't need to touch for several years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT GROWS / PROTECTS ============ -->
+<section class="section-ivory-dim">
+  <div class="wrap">
+
+    <div class="split-row reveal">
+      <div class="split-text">
+        <span class="eyebrow">How it grows</span>
+        <h3>Interest tied to an index — without owning the index</h3>
+        <p>In a given crediting period, interest may be added to your account based on the movement of a market index, like the S&amp;P 500. You don't own shares and dividends aren't included.</p>
+        <p>In exchange for the downside protection, growth is typically limited by a cap, participation rate, or spread — so you generally receive a portion of the index's gain, not all of it.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Interest credited is typically locked in once applied</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Caps and participation rates vary by carrier and product</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Many contracts let you split premium across index strategies, a fixed-rate option, or a mix of both — and reallocate each contract year</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <svg viewBox="0 0 480 320" fill="none">
+          <g stroke="#E4DCC6" stroke-width="1">
+            <line x1="50" y1="53" x2="460" y2="53"/>
+            <line x1="50" y1="128" x2="460" y2="128"/>
+            <line x1="50" y1="204" x2="460" y2="204"/>
+            <line x1="50" y1="260" x2="460" y2="260"/>
+          </g>
+          <g font-family="IBM Plex Mono" font-size="11" fill="#8A8168">
+            <text x="8" y="57">$150K</text>
+            <text x="8" y="132">$110K</text>
+            <text x="8" y="208">$70K</text>
+          </g>
+          <line x1="50" y1="260" x2="460" y2="260" stroke="#B7AD90" stroke-width="1.5"/>
+
+          <!-- market index line -->
+          <path d="M60,177.5 L116,128 L171,243.5 L227,191.25 L283,166.5 L339,180.25 L394,119.75 L450,73"
+            stroke="#B36A5E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+
+          <!-- annuity stepped value line -->
+          <path d="M60,177.5 L116,139 L171,139 L227,139 L283,119.75 L339,119.75 L394,89.5 L450,53.75"
+            stroke="#B08D57" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+          <g fill="#0E2635">
+            <circle cx="60" cy="177.5" r="4.5"/><circle cx="116" cy="139" r="4.5"/>
+            <circle cx="227" cy="139" r="4.5"/><circle cx="283" cy="119.75" r="4.5"/>
+            <circle cx="339" cy="119.75" r="4.5"/><circle cx="394" cy="89.5" r="4.5"/>
+            <circle cx="450" cy="53.75" r="4.5"/>
+          </g>
+
+          <g font-family="IBM Plex Mono" font-size="11" fill="#173B4F" font-weight="500">
+            <text x="34" y="196">$100K</text>
+            <text x="118" y="123" fill="#B08D57">$114K</text>
+            <text x="257" y="105" fill="#B08D57">$121K</text>
+            <text x="368" y="75" fill="#B08D57">$132K</text>
+            <text x="418" y="40" fill="#B08D57">$145K</text>
+          </g>
+
+          <g font-family="IBM Plex Mono" font-size="10.5" fill="#4C5B62">
+            <text x="46" y="283">'06</text><text x="102" y="283">'07</text><text x="157" y="283">'08</text>
+            <text x="213" y="283">'09</text><text x="269" y="283">'10</text><text x="325" y="283">'11</text>
+            <text x="380" y="283">'12</text><text x="436" y="283">'13</text>
+          </g>
+        </svg>
+        <div class="chart-legend" style="margin-top:14px;">
+          <div class="legend-item" style="color:#4C5B62;"><span class="legend-swatch" style="background:#B36A5E;"></span> Market index (illustrative)</div>
+          <div class="legend-item" style="color:#4C5B62;"><span class="legend-swatch" style="background:#B08D57;"></span> Annuity value — holds flat in down years</div>
+        </div>
+        <p style="font-size:0.76rem; color:#8A8168; margin-top:10px; font-style:italic;">Hypothetical example for illustration only — not actual performance, a projection, or a guarantee.</p>
+      </div>
+    </div>
+
+    <div class="split-row reveal single-col">
+      <div class="split-text">
+        <span class="eyebrow">How it protects</span>
+        <h3>A floor under your account, even in a down year</h3>
+        <p>If the linked index has a down year, most fixed indexed annuities credit $0 interest for that period rather than passing the loss on to your principal.</p>
+        <p>Gains already credited generally become part of your new baseline — so a future down year in the index typically doesn't erase the value you've already locked in.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#B08D57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Principal is shielded from market index losses</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#B08D57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Optional riders can add guaranteed lifetime income</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#B08D57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Contract fees or early withdrawals can still reduce value</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SIGNATURE CHART ============ -->
+<section class="section-navy">
+  <div class="wrap">
+    <div class="kicker-row reveal">
+      <span class="eyebrow on-dark">The mechanic in one picture</span>
+      <h2>The market moves. The floor only steps up.</h2>
+      <p>This is the core idea behind protection strategies inside an annuity — illustrated below, not an actual product quote.</p>
+    </div>
+    <div class="chart-panel reveal" id="chartPanel">
+      <svg viewBox="0 0 900 320" fill="none">
+        <g stroke="rgba(247,243,234,0.12)" stroke-width="1">
+          <line x1="0" y1="60" x2="900" y2="60"/>
+          <line x1="0" y1="140" x2="900" y2="140"/>
+          <line x1="0" y1="220" x2="900" y2="220"/>
+          <line x1="0" y1="290" x2="900" y2="290"/>
+        </g>
+        <path id="marketPath" d="M30 210 C 100 150, 140 260, 210 190 C 280 130, 320 250, 390 170 C 460 110, 500 240, 570 150 C 640 90, 690 220, 760 130 C 810 90, 840 160, 870 100"
+          stroke="#B36A5E" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.75"/>
+        <path id="floorPath" d="M30 230 L210 230 L210 190 L390 190 L390 150 L570 150 L570 110 L760 110 L760 75 L870 75"
+          stroke="#DFC090" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="chart-legend">
+        <div class="legend-item"><span class="legend-swatch" style="background:#B36A5E;"></span> Underlying market index (illustrative)</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Protected account value — steps up, doesn't step down</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO IT'S FOR ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker-row reveal">
+      <span class="eyebrow">Is this you?</span>
+      <h2>Built for temporary or partial protection — not an all-or-nothing move</h2>
+      <p>Most people we talk with aren't looking to exit the market entirely. They're looking to protect a slice of it.</p>
+    </div>
+    <div class="checklist">
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p>You're within roughly 5&ndash;15 years of retirement, or already retired.</p>
+      </div>
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p>You've lived through a market downturn and don't want your near-term retirement money exposed to the next one.</p>
+      </div>
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p>You like the idea of income you can't outlive, on top of Social Security.</p>
+      </div>
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p>You want growth potential without your principal being directly exposed to the market.</p>
+      </div>
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p>You're not looking to move all your savings — just a protected portion.</p>
+      </div>
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p>You'd rather have a plan reviewed with you than guess at what fits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALLOCATION SLIDER ============ -->
+<section class="section-ivory-dim">
+  <div class="wrap">
+    <div class="kicker-row reveal">
+      <span class="eyebrow">A portion, not all</span>
+      <h2>Try it: how much would you want protected?</h2>
+      <p>Move the slider to see the idea behind partial allocation. This is for illustration only — your actual mix would be based on your full financial picture.</p>
+    </div>
+    <div class="allocation-panel reveal">
+      <div class="donut-wrap">
+        <div class="donut" id="donut" style="--pct:45%;">
+          <div class="donut-center">
+            <div class="big" id="pctLabel">45%</div>
+            <div class="small">PROTECTED</div>
+          </div>
+        </div>
+        <div class="donut-legend">
+          <div class="legend-item"><span class="legend-swatch" style="background:#B08D57;"></span> Protected allocation</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#6FA79C;"></span> Remains market-invested</div>
+        </div>
+      </div>
+      <div class="slider-block">
+        <label for="allocSlider">Portion of retirement savings to protect</label>
+        <input type="range" id="allocSlider" min="10" max="90" value="45" step="5">
+        <p class="allocation-caption" id="allocCaption">A common starting point — roughly <strong>45%</strong> protected, with the rest left invested for long-term growth.</p>
+        <p class="allocation-disclaimer">For illustration purposes only. Not a quote, projection, or guarantee of any specific rate, allocation, or outcome. Your fit depends on your full financial picture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker-row reveal">
+      <span class="eyebrow">Common questions</span>
+      <h2>Before you book the call</h2>
+    </div>
+    <div class="faq-list">
+      <details class="reveal">
+        <summary>Will I lose access to my money? <span class="plus"></span></summary>
+        <p>Most contracts allow penalty-free withdrawals up to a set percentage each year. Withdrawals beyond that amount — or large withdrawals during the surrender-charge period — can trigger surrender charges. Terms vary by carrier and contract, which is exactly what we'd review together.</p>
+      </details>
+      <details class="reveal">
+        <summary>Is this the same as investing in the stock market? <span class="plus"></span></summary>
+        <p>No. Your premium isn't directly invested in stocks. With a fixed indexed annuity, interest credited (if any) is based on a formula tied to an index's performance, subject to caps or participation rates set by the carrier.</p>
+      </details>
+      <details class="reveal">
+        <summary>What happens if the index goes down that year? <span class="plus"></span></summary>
+        <p>Typically, $0 interest is credited for that period rather than the account losing value due to market performance. Contract fees or optional rider costs, if elected, can still affect account value.</p>
+      </details>
+      <details class="reveal">
+        <summary>Are annuities insured like a bank account? <span class="plus"></span></summary>
+        <p>No. Annuities are not FDIC or NCUA insured. Guarantees are backed solely by the claims-paying ability and financial strength of the issuing insurance company — not by any bank or government agency.</p>
+      </details>
+      <details class="reveal">
+        <summary>Do I have to move all of my retirement savings? <span class="plus"></span></summary>
+        <p>No. Most people we talk with allocate a portion of their savings — money they specifically want protected — while keeping the rest invested elsewhere.</p>
+      </details>
+      <details class="reveal">
+        <summary>What actually happens on the call? <span class="plus"></span></summary>
+        <p>A no-pressure, 15&ndash;20 minute conversation over Zoom about your current savings, timeline, and goals — and whether a protection strategy makes sense for part of your portfolio. It's education-first, not a pitch.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="section-ivory-dim">
+  <div class="wrap">
+    <div class="final-cta reveal">
+      <svg class="agent-avatar" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="49" fill="#173B4F"/>
+        <circle cx="50" cy="42" r="16" fill="#DFC090"/>
+        <path d="M18 88c4-20 20-30 32-30s28 10 32 30" fill="#DFC090" opacity="0.85"/>
+      </svg>
+      <div>
+        <h2>Let's talk through your numbers.</h2>
+        <p>I'm August So, an Arizona-licensed insurance professional focused on retirement income and annuity planning. Book a short Zoom call — no cost, no obligation, just a clear look at your options.</p>
+      </div>
+      <a class="btn btn-primary" href="https://calendly.com/augustso520/retirement-income-tax-planning-call-with-august-so" target="_blank" rel="noopener">Schedule Your Free Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER / DISCLOSURES ============ -->
+<footer>
+  <div class="wrap">
+    <span class="foot-brand">August So — Retirement Income Planning</span>
+    <p>This website is for educational purposes only and does not constitute financial, investment, tax, or legal advice, nor an offer or solicitation to buy or sell any specific insurance or annuity product. Product availability and features vary by state and carrier.</p>
+    <p>Annuities are long-term insurance contracts issued by insurance companies — they are not bank deposits and are not FDIC or NCUA insured. Any guarantees, including protection of principal or income, are backed solely by the claims-paying ability and financial strength of the issuing insurance company, not by any government agency.</p>
+    <p>Interest crediting methods, caps, participation rates, fees, rider costs, and surrender charge schedules vary by carrier and contract and are subject to change. Withdrawals in excess of any penalty-free amount, and withdrawals made during a contract's surrender charge period, may be subject to surrender charges. Withdrawals taken before age 59½ may also be subject to a 10% IRS early withdrawal penalty.</p>
+    <p>Optional income riders, if elected, typically carry an additional cost and are subject to the terms of the rider. Not affiliated with or endorsed by any government agency, including the Social Security Administration. Please review a product's official disclosure documents and speak with a licensed professional before making any decisions.</p>
+    <p>August So is licensed to sell insurance in Arizona. <em>[Add AZ license number and agency name here before publishing this page.]</em> © 2026 August So. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CTA ============ -->
+<div class="sticky-cta">
+  <a class="btn btn-primary" href="https://calendly.com/augustso520/retirement-income-tax-planning-call-with-august-so" target="_blank" rel="noopener">Schedule Your Free Call</a>
+</div>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // Signature chart draw-on-scroll
+  const chartPanel = document.getElementById('chartPanel');
+  const chartObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        chartPanel.classList.add('in-view');
+        chartObserver.unobserve(chartPanel);
+      }
+    });
+  }, { threshold: 0.3 });
+  chartObserver.observe(chartPanel);
+
+  // Allocation slider
+  const slider = document.getElementById('allocSlider');
+  const donut = document.getElementById('donut');
+  const pctLabel = document.getElementById('pctLabel');
+  const caption = document.getElementById('allocCaption');
+
+  function describe(pct){
+    if (pct <= 25) return `A lighter touch — <strong>${pct}%</strong> protected, with most savings left invested for growth.`;
+    if (pct <= 55) return `A common starting point — roughly <strong>${pct}%</strong> protected, with the rest left invested for long-term growth.`;
+    if (pct <= 75) return `A more conservative mix — <strong>${pct}%</strong> protected, prioritizing stability over maximum growth.`;
+    return `A strongly protective mix — <strong>${pct}%</strong> shielded from market drops, with a smaller portion left for growth.`;
+  }
+
+  function updateAllocation(val){
+    donut.style.setProperty('--pct', val + '%');
+    slider.style.setProperty('--pct', val + '%');
+    pctLabel.textContent = val + '%';
+    caption.innerHTML = describe(val);
+  }
+
+  slider.addEventListener('input', (e) => updateAllocation(e.target.value));
+  updateAllocation(slider.value);
+</script>
+
+</body>
+</html>
