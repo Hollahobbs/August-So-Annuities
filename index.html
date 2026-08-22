@@ -208,10 +208,17 @@
   .chart-legend{display:flex; gap:26px; flex-wrap:wrap; margin-top:22px;}
   .legend-item{display:flex; align-items:center; gap:9px; font-size:0.88rem; color:rgba(247,243,234,0.85);}
   .legend-swatch{width:22px; height:4px; border-radius:2px;}
-  #floorPath{stroke-dasharray:900; stroke-dashoffset:900; transition:stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1);}
-  #marketPath{stroke-dasharray:900; stroke-dashoffset:900; transition:stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1) .2s;}
-  .chart-panel.in-view #floorPath,
-  .chart-panel.in-view #marketPath{stroke-dashoffset:0;}
+
+  .image-pair{
+    display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:44px;
+  }
+  .image-pair img{
+    width:100%; height:auto; border-radius:16px;
+    box-shadow:var(--shadow);
+  }
+  @media (max-width:700px){
+    .image-pair{grid-template-columns:1fr;}
+  }
 
   /* Checklist */
   .checklist{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:44px;}
@@ -332,7 +339,7 @@
   .reveal.is-visible{opacity:1; transform:translateY(0);}
 
   @media (prefers-reduced-motion:reduce){
-    .sun,.wave,.reveal,#floorPath,#marketPath{animation:none !important; transition:none !important; opacity:1 !important; transform:none !important; stroke-dashoffset:0 !important;}
+    .sun,.wave,.reveal{animation:none !important; transition:none !important; opacity:1 !important; transform:none !important;}
   }
 
   @media (max-width:900px){
@@ -496,31 +503,17 @@
   </div>
 </section>
 
-<!-- ============ SIGNATURE CHART ============ -->
+<!-- ============ REAL-NUMBERS SNAPSHOT ============ -->
 <section class="section-navy">
   <div class="wrap">
     <div class="kicker-row reveal">
-      <span class="eyebrow on-dark">The mechanic in one picture</span>
-      <h2>The market moves. The floor only steps up.</h2>
-      <p>This is the core idea behind protection strategies inside an annuity — illustrated below, not an actual product quote.</p>
+      <span class="eyebrow on-dark">Two ways to see it</span>
+      <h2>Recovery time and taxes, side by side</h2>
+      <p>The first shows how long a $1,000 investment takes to recover after a market drop compared with a protected annuity that never lost ground. The second shows how tax-deferred growth compares to a taxable CD earning the same rate. Both are illustrative examples, not a quote or guarantee for any specific account.</p>
     </div>
-    <div class="chart-panel reveal" id="chartPanel">
-      <svg viewBox="0 0 900 320" fill="none">
-        <g stroke="rgba(247,243,234,0.12)" stroke-width="1">
-          <line x1="0" y1="60" x2="900" y2="60"/>
-          <line x1="0" y1="140" x2="900" y2="140"/>
-          <line x1="0" y1="220" x2="900" y2="220"/>
-          <line x1="0" y1="290" x2="900" y2="290"/>
-        </g>
-        <path id="marketPath" d="M30 210 C 100 150, 140 260, 210 190 C 280 130, 320 250, 390 170 C 460 110, 500 240, 570 150 C 640 90, 690 220, 760 130 C 810 90, 840 160, 870 100"
-          stroke="#B36A5E" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.75"/>
-        <path id="floorPath" d="M30 230 L210 230 L210 190 L390 190 L390 150 L570 150 L570 110 L760 110 L760 75 L870 75"
-          stroke="#DFC090" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <div class="chart-legend">
-        <div class="legend-item"><span class="legend-swatch" style="background:#B36A5E;"></span> Underlying market index (illustrative)</div>
-        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Protected account value — steps up, doesn't step down</div>
-      </div>
+    <div class="image-pair reveal">
+      <img src="market-recovery-comparison.jpg" alt="Chart comparing recovery time after a market downturn for a market investment versus a fixed indexed annuity">
+      <img src="tax-deferred-growth.jpg" alt="Chart comparing interest kept after taxes in a taxable CD versus a tax-deferred fixed annuity">
     </div>
   </div>
 </section>
@@ -676,18 +669,6 @@
     });
   }, { threshold: 0.15 });
   revealEls.forEach(el => revealObserver.observe(el));
-
-  // Signature chart draw-on-scroll
-  const chartPanel = document.getElementById('chartPanel');
-  const chartObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        chartPanel.classList.add('in-view');
-        chartObserver.unobserve(chartPanel);
-      }
-    });
-  }, { threshold: 0.3 });
-  chartObserver.observe(chartPanel);
 
   // Allocation slider
   const slider = document.getElementById('allocSlider');
