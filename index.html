@@ -183,9 +183,10 @@
   }
   .split-text h3{font-size:1.7rem; margin-bottom:16px;}
   .split-text p{color:var(--ink-soft); margin-bottom:14px;}
-  .split-text ul{margin:18px 0 0; padding:0; list-style:none;}
+  .split-subhead{font-family:'Fraunces',serif; font-weight:600; font-size:1.08rem; color:var(--navy-deep); margin-top:22px;}
+  .split-text ul{margin:12px 0 0; padding:0; list-style:none;}
   .split-text li{
-    display:flex; gap:12px; padding:10px 0;
+    display:flex; gap:12px; padding:12px 0;
     border-top:1px solid rgba(14,38,53,0.08);
     font-size:0.96rem; color:var(--ink);
   }
@@ -206,6 +207,26 @@
     box-shadow:var(--shadow);
   }
   .chart-legend{display:flex; gap:26px; flex-wrap:wrap; margin-top:22px;}
+
+  .returns-table-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  .returns-table{width:100%; border-collapse:collapse; font-family:'IBM Plex Mono',monospace; font-size:0.92rem; min-width:640px;}
+  .returns-table th{
+    text-align:left; padding:12px 14px; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em;
+    color:rgba(247,243,234,0.55); border-bottom:1px solid rgba(247,243,234,0.2); font-weight:500;
+  }
+  .returns-table td{padding:11px 14px; border-bottom:1px solid rgba(247,243,234,0.08); color:var(--ivory);}
+  .returns-table tbody tr:hover{background:rgba(247,243,234,0.04);}
+  .returns-table td.neg{color:#D69185;}
+  .returns-table td.pos{color:#F7F3EA;}
+  .returns-table td.zero{color:rgba(247,243,234,0.5);}
+  .returns-table td.cred{color:#DFC090; font-weight:600;}
+  .returns-table td.bal-m{color:#D69185;}
+  .returns-table td.bal-a{color:#DFC090; font-weight:600;}
+  .returns-table tfoot td{
+    padding:14px; border-top:2px solid rgba(247,243,234,0.3); border-bottom:none;
+    font-weight:700; font-size:0.98rem;
+  }
+  .returns-table tfoot td:first-child{color:rgba(247,243,234,0.7); font-family:'Fraunces',serif; font-weight:600; text-align:right;}
   .legend-item{display:flex; align-items:center; gap:9px; font-size:0.88rem; color:rgba(247,243,234,0.85);}
   .legend-swatch{width:22px; height:4px; border-radius:2px;}
 
@@ -218,6 +239,23 @@
   }
   @media (max-width:700px){
     .image-pair{grid-template-columns:1fr;}
+  }
+
+  /* Real-world example section */
+  .example-title{color:var(--ivory) !important; font-size:1.25rem; margin:8px 0 22px; text-align:center;}
+  .example-caption{margin-top:18px; font-size:0.88rem; color:rgba(247,243,234,0.65); max-width:52ch;}
+  .example-summary{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:20px;
+    margin-top:36px; padding-top:32px; border-top:1px solid rgba(247,243,234,0.14);
+    max-width:640px; margin-left:auto; margin-right:auto;
+  }
+  .summary-stat{display:flex; flex-direction:column; gap:8px;}
+  .summary-label{font-family:'IBM Plex Mono',monospace; font-size:0.74rem; text-transform:uppercase; letter-spacing:0.06em; color:rgba(247,243,234,0.5);}
+  .summary-value{font-family:'Fraunces',serif; font-size:1.2rem; color:var(--ivory); font-weight:500;}
+  .summary-value .dim{font-family:'Inter',sans-serif; font-size:0.85rem; font-weight:400; color:rgba(247,243,234,0.6);}
+  .example-disclaimer{margin-top:28px; font-size:0.76rem; color:rgba(247,243,234,0.45); font-style:italic; line-height:1.6; max-width:90ch;}
+  @media (max-width:800px){
+    .example-summary{grid-template-columns:1fr;}
   }
 
   /* Checklist */
@@ -385,7 +423,7 @@
         </a>
         <a class="btn btn-ghost" href="#how-it-works">See how it works ↓</a>
       </div>
-      <p class="hero-note">15&ndash;20 min on Zoom · No cost · No obligation · Licensed in Arizona</p>
+      <p class="hero-note">15&ndash;20 min on Zoom · No cost · No obligation · Licensed in AZ, TX, FL, ND</p>
     </div>
   </div>
 </section>
@@ -396,23 +434,23 @@
     <div class="kicker-row reveal">
       <span class="eyebrow">The basics</span>
       <h2>What an annuity actually is</h2>
-      <p>Strip away the sales language and it's a fairly simple idea: a contract between you and an insurance company, built around protection and, often, income.</p>
+      <p>An annuity is a contract between you and an insurance company that shifts a portion of risk away from you and onto the company. Annuities can be both a boost to retirement savings and a dependable source of future income.</p>
     </div>
     <div class="trio">
       <div class="card reveal">
         <svg class="icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#B08D57" stroke-width="2"/><path d="M6 18h36" stroke="#B08D57" stroke-width="2"/><path d="M14 26h8M14 31h14" stroke="#B08D57" stroke-width="2" stroke-linecap="round"/></svg>
-        <h3>A contract, not a stock</h3>
-        <p>You put in a lump sum or series of payments. In exchange, the insurance company contractually agrees to specific protections and, if you choose, future income.</p>
+        <h3>A contract built for your retirement, not the insurance company</h3>
+        <p>Annuities help protect a portion of your nest egg from market volatility, safely setting aside funds for later expenses such as Medicare payments, long-term care planning, inheritance, and tax planning.</p>
       </div>
       <div class="card reveal">
         <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M24 6l16 8v10c0 11-7 17-16 20-9-3-16-9-16-20V14l16-8z" stroke="#6FA79C" stroke-width="2" stroke-linejoin="round"/><path d="M17 24l5 5 10-11" stroke="#6FA79C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Not directly in the market</h3>
-        <p>With a fixed indexed annuity, your premium isn't invested in stocks. Interest credited is instead linked to how an index performs — with protections built in.</p>
+        <h3>Provides guarantees for peace of mind</h3>
+        <p>In retirement, annuities can offer pension-like cash flow for life, helping to supplement income like Social Security to meet needs and to protect against outliving savings if you live a long time.</p>
       </div>
       <div class="card reveal">
         <svg class="icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="#B08D57" stroke-width="2"/><path d="M24 15v9l7 4" stroke="#B08D57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Built for the long game</h3>
-        <p>These are long-term contracts, often with a surrender-charge period. They're generally a fit for money you don't need to touch for several years.</p>
+        <h3>Liquidity available for withdrawals</h3>
+        <p>Annuities also offer flexibility around things like accessing principal or controlling the timing around taking distributions.</p>
       </div>
     </div>
   </div>
@@ -422,67 +460,19 @@
 <section class="section-ivory-dim">
   <div class="wrap">
 
-    <div class="split-row reveal">
+    <div class="split-row reveal single-col">
       <div class="split-text">
         <span class="eyebrow">How it grows</span>
-        <h3>Interest tied to an index — without owning the index</h3>
-        <p>In a given crediting period, interest may be added to your account based on the movement of a market index, like the S&amp;P 500. You don't own shares and dividends aren't included.</p>
-        <p>In exchange for the downside protection, growth is typically limited by a cap, participation rate, or spread — so you generally receive a portion of the index's gain, not all of it.</p>
+        <h3>Interest tied to an index — without risks, fees, or headaches</h3>
+        <p>In a given crediting period, interest may be added to your account based on the movement of a market index, like the S&amp;P 500.</p>
+        <p>In exchange for the downside protection, growth is typically limited by a cap or participation rate.</p>
+        <p class="split-subhead">How is growth credited?</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Interest credited is typically locked in once applied</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Caps and participation rates vary by carrier and product</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Many contracts let you split premium across index strategies, a fixed-rate option, or a mix of both — and reallocate each contract year</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Cap:</strong> your account is credited with the growth of the S&amp;P 500 up to the cap</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Participation rate:</strong> you receive uncapped growth of the S&amp;P 500 at a certain percentage</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Trigger:</strong> if the S&amp;P 500 is positive for the year, you get a set percentage of growth — usually higher than a cap</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>In all three, if the S&amp;P 500 is negative you receive 0% interest. Total safety.</span></li>
         </ul>
-      </div>
-      <div class="split-media">
-        <svg viewBox="0 0 480 320" fill="none">
-          <g stroke="#E4DCC6" stroke-width="1">
-            <line x1="50" y1="53" x2="460" y2="53"/>
-            <line x1="50" y1="128" x2="460" y2="128"/>
-            <line x1="50" y1="204" x2="460" y2="204"/>
-            <line x1="50" y1="260" x2="460" y2="260"/>
-          </g>
-          <g font-family="IBM Plex Mono" font-size="11" fill="#8A8168">
-            <text x="8" y="57">$150K</text>
-            <text x="8" y="132">$110K</text>
-            <text x="8" y="208">$70K</text>
-          </g>
-          <line x1="50" y1="260" x2="460" y2="260" stroke="#B7AD90" stroke-width="1.5"/>
-
-          <!-- market index line -->
-          <path d="M60,177.5 L116,128 L171,243.5 L227,191.25 L283,166.5 L339,180.25 L394,119.75 L450,73"
-            stroke="#B36A5E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
-
-          <!-- annuity stepped value line -->
-          <path d="M60,177.5 L116,139 L171,139 L227,139 L283,119.75 L339,119.75 L394,89.5 L450,53.75"
-            stroke="#B08D57" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-          <g fill="#0E2635">
-            <circle cx="60" cy="177.5" r="4.5"/><circle cx="116" cy="139" r="4.5"/>
-            <circle cx="227" cy="139" r="4.5"/><circle cx="283" cy="119.75" r="4.5"/>
-            <circle cx="339" cy="119.75" r="4.5"/><circle cx="394" cy="89.5" r="4.5"/>
-            <circle cx="450" cy="53.75" r="4.5"/>
-          </g>
-
-          <g font-family="IBM Plex Mono" font-size="11" fill="#173B4F" font-weight="500">
-            <text x="34" y="196">$100K</text>
-            <text x="118" y="123" fill="#B08D57">$114K</text>
-            <text x="257" y="105" fill="#B08D57">$121K</text>
-            <text x="368" y="75" fill="#B08D57">$132K</text>
-            <text x="418" y="40" fill="#B08D57">$145K</text>
-          </g>
-
-          <g font-family="IBM Plex Mono" font-size="10.5" fill="#4C5B62">
-            <text x="46" y="283">'06</text><text x="102" y="283">'07</text><text x="157" y="283">'08</text>
-            <text x="213" y="283">'09</text><text x="269" y="283">'10</text><text x="325" y="283">'11</text>
-            <text x="380" y="283">'12</text><text x="436" y="283">'13</text>
-          </g>
-        </svg>
-        <div class="chart-legend" style="margin-top:14px;">
-          <div class="legend-item" style="color:#4C5B62;"><span class="legend-swatch" style="background:#B36A5E;"></span> Market index (illustrative)</div>
-          <div class="legend-item" style="color:#4C5B62;"><span class="legend-swatch" style="background:#B08D57;"></span> Annuity value — holds flat in down years</div>
-        </div>
-        <p style="font-size:0.76rem; color:#8A8168; margin-top:10px; font-style:italic;">Hypothetical example for illustration only — not actual performance, a projection, or a guarantee.</p>
       </div>
     </div>
 
@@ -492,29 +482,117 @@
         <h3>A floor under your account, even in a down year</h3>
         <p>If the linked index has a down year, most fixed indexed annuities credit $0 interest for that period rather than passing the loss on to your principal.</p>
         <p>Gains already credited generally become part of your new baseline — so a future down year in the index typically doesn't erase the value you've already locked in.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#B08D57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Principal is shielded from market index losses</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#B08D57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Optional riders can add guaranteed lifetime income</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#B08D57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Contract fees or early withdrawals can still reduce value</li>
-        </ul>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ============ REAL-NUMBERS SNAPSHOT ============ -->
+<!-- ============ REAL-WORLD EXAMPLE ============ -->
 <section class="section-navy">
   <div class="wrap">
     <div class="kicker-row reveal">
-      <span class="eyebrow on-dark">Two ways to see it</span>
-      <h2>Recovery time and taxes, side by side</h2>
-      <p>The first shows how long a $1,000 investment takes to recover after a market drop compared with a protected annuity that never lost ground. The second shows how tax-deferred growth compares to a taxable CD earning the same rate. Both are illustrative examples, not a quote or guarantee for any specific account.</p>
+      <span class="eyebrow on-dark">A real-world example</span>
+      <h2>Retiring in 2000 with $250,000 — two ways it could have gone</h2>
+      <p>Meet a hypothetical retiree: age 64, $250,000 saved. They withdraw 6% of their savings — $15,000 a year — for income from 2000 through 2010: two of the roughest market stretches for retirees in modern history.</p>
     </div>
-    <div class="image-pair reveal">
-      <img src="market-recovery-comparison.JPG" alt="Chart comparing recovery time after a market downturn for a market investment versus a fixed indexed annuity">
-      <img src="tax-deferred-growth.JPG" alt="Chart comparing interest kept after taxes in a taxable CD versus a tax-deferred fixed annuity">
+
+    <div class="chart-panel reveal" style="max-width:900px;margin:44px auto 0;">
+      <h3 class="example-title">$250,000, Withdrawing $15,000/yr: Market vs. Annuity, 2000&ndash;2010</h3>
+      <div class="returns-table-wrap">
+        <table class="returns-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>S&amp;P 500 Return</th>
+              <th>Credited (8% Cap / 0% Floor)</th>
+              <th>Market Balance</th>
+              <th>Annuity Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2000</td><td class="neg">-9.22%</td><td class="zero">0.00%</td><td class="bal-m">$213,333</td><td class="bal-a">$235,000</td></tr>
+            <tr><td>2001</td><td class="neg">-12.08%</td><td class="zero">0.00%</td><td class="bal-m">$174,335</td><td class="bal-a">$220,000</td></tr>
+            <tr><td>2002</td><td class="neg">-22.34%</td><td class="zero">0.00%</td><td class="bal-m">$123,758</td><td class="bal-a">$205,000</td></tr>
+            <tr><td>2003</td><td class="pos">+28.59%</td><td class="cred">8.00%</td><td class="bal-m">$139,857</td><td class="bal-a">$205,200</td></tr>
+            <tr><td>2004</td><td class="pos">+10.74%</td><td class="cred">8.00%</td><td class="bal-m">$138,268</td><td class="bal-a">$205,416</td></tr>
+            <tr><td>2005</td><td class="pos">+4.71%</td><td class="cred">4.71%</td><td class="bal-m">$129,076</td><td class="bal-a">$199,388</td></tr>
+            <tr><td>2006</td><td class="pos">+15.60%</td><td class="cred">8.00%</td><td class="bal-m">$131,864</td><td class="bal-a">$199,139</td></tr>
+            <tr><td>2007</td><td class="pos">+5.41%</td><td class="cred">5.41%</td><td class="bal-m">$123,187</td><td class="bal-a">$194,102</td></tr>
+            <tr><td>2008</td><td class="neg">-37.03%</td><td class="zero">0.00%</td><td class="bal-m">$68,144</td><td class="bal-a">$179,102</td></tr>
+            <tr><td>2009</td><td class="pos">+26.22%</td><td class="cred">8.00%</td><td class="bal-m">$67,076</td><td class="bal-a">$177,230</td></tr>
+            <tr><td>2010</td><td class="pos">+14.94%</td><td class="cred">8.00%</td><td class="bal-m">$59,845</td><td class="bal-a">$175,208</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="3">Ending Balance, 2010</td>
+              <td class="bal-m">$59,845</td>
+              <td class="bal-a">$175,208</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item"><span class="legend-swatch" style="background:#B36A5E;"></span> S&amp;P 500 annual return</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Credited with a hypothetical 8% cap and 0% floor</div>
+      </div>
+      <p class="example-caption">In down years the capped strategy credits 0% instead of the loss; in up years it's credited the index gain up to 8%, so credited values never exceed 8% and never go below 0%.</p>
     </div>
+
+    <div class="chart-panel reveal" style="max-width:900px;margin:44px auto 0;">
+      <h3 class="example-title">$250,000: Market vs. Annuity, 2000&ndash;2010</h3>
+      <svg viewBox="0 0 900 300" fill="none">
+        <g stroke="rgba(247,243,234,0.12)" stroke-width="1">
+          <line x1="40" y1="40" x2="880" y2="40"/>
+          <line x1="40" y1="128" x2="880" y2="128"/>
+          <line x1="40" y1="216" x2="880" y2="216"/>
+          <line x1="40" y1="260" x2="880" y2="260"/>
+        </g>
+        <g font-family="IBM Plex Mono" font-size="11" fill="rgba(247,243,234,0.55)">
+          <text x="4" y="44">$250K</text>
+          <text x="10" y="132">$150K</text>
+          <text x="16" y="220">$50K</text>
+        </g>
+
+        <!-- Annuity line (drawn first, sits behind) -->
+        <path d="M60,53.2 L138,66.4 L216,79.6 L294,79.4 L372,79.2 L450,84.5 L528,84.8 L606,89.2 L684,102.4 L762,104.1 L840,105.8"
+          stroke="#DFC090" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="60" cy="53.2" r="5" fill="#F7F3EA"/>
+        <circle cx="840" cy="105.8" r="5" fill="#DFC090"/>
+
+        <!-- Market line -->
+        <path d="M60,72 L138,106.6 L216,151.1 L294,136.9 L372,138.3 L450,146.4 L528,144 L606,151.6 L684,200 L762,201 L840,207.3"
+          stroke="#B36A5E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="840" cy="207.3" r="5" fill="#B36A5E"/>
+
+        <g font-family="IBM Plex Mono" font-size="12" fill="#F7F3EA" font-weight="500">
+          <text x="18" y="38">$250K start</text>
+          <text x="770" y="94">$175,208</text>
+          <text x="770" y="222">$59,845</text>
+        </g>
+        <g font-family="IBM Plex Mono" font-size="10" fill="rgba(247,243,234,0.5)">
+          <text x="50" y="280">2000</text><text x="360" y="280">2004</text>
+          <text x="670" y="280">2008</text><text x="820" y="280">2010</text>
+        </g>
+      </svg>
+      <div class="chart-legend">
+        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Fixed indexed annuity — 0% floor, 8% cap</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#B36A5E;"></span> S&amp;P 500 — full market exposure</div>
+      </div>
+      <p class="example-caption">Both lines assume the same $15,000/year (6%) withdrawals. The annuity line earns 0% instead of the loss in every down year (2000&ndash;2002, 2008) and is credited up to an 8% cap in up years; the market line absorbs each down year in full.</p>
+    </div>
+
+    <div class="example-summary reveal">
+      <div class="summary-stat">
+        <span class="summary-label">Same withdrawals, both scenarios</span>
+        <span class="summary-value">$15,000/yr <span class="dim">($165,000 total)</span></span>
+      </div>
+      <div class="summary-stat">
+        <span class="summary-label">Ending balance, 2010</span>
+        <span class="summary-value"><span style="color:#B36A5E;">$59,845</span> market &nbsp;vs&nbsp; <span style="color:#DFC090;">$175,208</span> annuity</span>
+      </div>
+    </div>
+    <p class="example-disclaimer reveal">Hypothetical example for illustration only, based on published S&amp;P 500 total returns (dividends reinvested) for 2000&ndash;2010. Assumes withdrawals taken at the start of each year, a 0% floor and 8% annual cap for the annuity scenario, and no fees, taxes, or rider costs in either scenario. Actual caps, participation rates, fees, and rider costs vary by carrier and product and will affect real results. Past performance does not guarantee future results, and this is not a projection or quote for any specific product or person.</p>
   </div>
 </section>
 
@@ -633,7 +711,7 @@
       </svg>
       <div>
         <h2>Let's talk through your numbers.</h2>
-        <p>I'm August So, an Arizona-licensed insurance professional focused on retirement income and annuity planning. Book a short Zoom call — no cost, no obligation, just a clear look at your options.</p>
+        <p>I'm August So, an insurance professional licensed in AZ, TX, FL, and ND, focused on retirement income and annuity planning. Book a short Zoom call — no cost, no obligation, just a clear look at your options.</p>
       </div>
       <a class="btn btn-primary" href="https://calendly.com/augustso520/retirement-income-tax-planning-call-with-august-so" target="_blank" rel="noopener">Schedule Your Free Call</a>
     </div>
@@ -648,7 +726,7 @@
     <p>Annuities are long-term insurance contracts issued by insurance companies — they are not bank deposits and are not FDIC or NCUA insured. Any guarantees, including protection of principal or income, are backed solely by the claims-paying ability and financial strength of the issuing insurance company, not by any government agency.</p>
     <p>Interest crediting methods, caps, participation rates, fees, rider costs, and surrender charge schedules vary by carrier and contract and are subject to change. Withdrawals in excess of any penalty-free amount, and withdrawals made during a contract's surrender charge period, may be subject to surrender charges. Withdrawals taken before age 59½ may also be subject to a 10% IRS early withdrawal penalty.</p>
     <p>Optional income riders, if elected, typically carry an additional cost and are subject to the terms of the rider. Not affiliated with or endorsed by any government agency, including the Social Security Administration. Please review a product's official disclosure documents and speak with a licensed professional before making any decisions.</p>
-    <p>August So is licensed to sell insurance in Arizona. <em>[Add AZ license number and agency name here before publishing this page.]</em> © 2026 August So. All rights reserved.</p>
+    <p>August So is licensed to sell insurance in Arizona, Texas, Florida, and North Dakota. <em>[Add license numbers and agency name here before publishing this page.]</em> © 2026 August So. All rights reserved.</p>
   </div>
 </footer>
 
