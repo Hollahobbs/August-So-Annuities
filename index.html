@@ -244,6 +244,10 @@
   /* Real-world example section */
   .example-title{color:var(--ivory) !important; font-size:1.25rem; margin:8px 0 22px; text-align:center;}
   .example-caption{margin-top:18px; font-size:0.88rem; color:rgba(247,243,234,0.65); max-width:52ch;}
+  .example-transition{
+    text-align:center; font-family:'Fraunces',serif; font-style:italic; font-size:1.15rem;
+    color:rgba(247,243,234,0.8); margin:44px 0 0;
+  }
   .example-summary{
     display:grid; grid-template-columns:repeat(2,1fr); gap:20px;
     margin-top:36px; padding-top:32px; border-top:1px solid rgba(247,243,234,0.14);
@@ -468,6 +472,8 @@
         <p>In exchange for the downside protection, growth is typically limited by a cap or participation rate.</p>
         <p class="split-subhead">How is growth credited?</p>
         <ul>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Bonus:</strong> Annuities can come with a bonus when you fund the annuity. Current bonus rates on annuities can be as high as 20&ndash;25% depending on carrier and contract length</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Fixed rate:</strong> your account is credited with a fixed percentage rate for 1 year, based off of current interest rates, currently around 5&ndash;5.5%</span></li>
           <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Cap:</strong> your account is credited with the growth of the S&amp;P 500 up to the cap</span></li>
           <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Participation rate:</strong> you receive uncapped growth of the S&amp;P 500 at a certain percentage</span></li>
           <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Trigger:</strong> if the S&amp;P 500 is positive for the year, you get a set percentage of growth — usually higher than a cap</span></li>
@@ -507,27 +513,27 @@
               <th>S&amp;P 500 Return</th>
               <th>Credited (8% Cap / 0% Floor)</th>
               <th>Market Balance</th>
-              <th>Annuity Balance</th>
+              <th>Annuity Balance (24% Bonus)</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>2000</td><td class="neg">-9.22%</td><td class="zero">0.00%</td><td class="bal-m">$213,333</td><td class="bal-a">$235,000</td></tr>
-            <tr><td>2001</td><td class="neg">-12.08%</td><td class="zero">0.00%</td><td class="bal-m">$174,335</td><td class="bal-a">$220,000</td></tr>
-            <tr><td>2002</td><td class="neg">-22.34%</td><td class="zero">0.00%</td><td class="bal-m">$123,758</td><td class="bal-a">$205,000</td></tr>
-            <tr><td>2003</td><td class="pos">+28.59%</td><td class="cred">8.00%</td><td class="bal-m">$139,857</td><td class="bal-a">$205,200</td></tr>
-            <tr><td>2004</td><td class="pos">+10.74%</td><td class="cred">8.00%</td><td class="bal-m">$138,268</td><td class="bal-a">$205,416</td></tr>
-            <tr><td>2005</td><td class="pos">+4.71%</td><td class="cred">4.71%</td><td class="bal-m">$129,076</td><td class="bal-a">$199,388</td></tr>
-            <tr><td>2006</td><td class="pos">+15.60%</td><td class="cred">8.00%</td><td class="bal-m">$131,864</td><td class="bal-a">$199,139</td></tr>
-            <tr><td>2007</td><td class="pos">+5.41%</td><td class="cred">5.41%</td><td class="bal-m">$123,187</td><td class="bal-a">$194,102</td></tr>
-            <tr><td>2008</td><td class="neg">-37.03%</td><td class="zero">0.00%</td><td class="bal-m">$68,144</td><td class="bal-a">$179,102</td></tr>
-            <tr><td>2009</td><td class="pos">+26.22%</td><td class="cred">8.00%</td><td class="bal-m">$67,076</td><td class="bal-a">$177,230</td></tr>
-            <tr><td>2010</td><td class="pos">+14.94%</td><td class="cred">8.00%</td><td class="bal-m">$59,845</td><td class="bal-a">$175,208</td></tr>
+            <tr><td>2000</td><td class="neg">-9.22%</td><td class="zero">0.00%</td><td class="bal-m">$213,333</td><td class="bal-a">$295,000</td></tr>
+            <tr><td>2001</td><td class="neg">-12.08%</td><td class="zero">0.00%</td><td class="bal-m">$174,335</td><td class="bal-a">$280,000</td></tr>
+            <tr><td>2002</td><td class="neg">-22.34%</td><td class="zero">0.00%</td><td class="bal-m">$123,758</td><td class="bal-a">$265,000</td></tr>
+            <tr><td>2003</td><td class="pos">+28.59%</td><td class="cred">8.00%</td><td class="bal-m">$139,857</td><td class="bal-a">$270,000</td></tr>
+            <tr><td>2004</td><td class="pos">+10.74%</td><td class="cred">8.00%</td><td class="bal-m">$138,268</td><td class="bal-a">$275,400</td></tr>
+            <tr><td>2005</td><td class="pos">+4.71%</td><td class="cred">4.71%</td><td class="bal-m">$129,076</td><td class="bal-a">$272,666</td></tr>
+            <tr><td>2006</td><td class="pos">+15.60%</td><td class="cred">8.00%</td><td class="bal-m">$131,864</td><td class="bal-a">$278,279</td></tr>
+            <tr><td>2007</td><td class="pos">+5.41%</td><td class="cred">5.41%</td><td class="bal-m">$123,187</td><td class="bal-a">$277,529</td></tr>
+            <tr><td>2008</td><td class="neg">-37.03%</td><td class="zero">0.00%</td><td class="bal-m">$68,144</td><td class="bal-a">$262,529</td></tr>
+            <tr><td>2009</td><td class="pos">+26.22%</td><td class="cred">8.00%</td><td class="bal-m">$67,076</td><td class="bal-a">$267,331</td></tr>
+            <tr><td>2010</td><td class="pos">+14.94%</td><td class="cred">8.00%</td><td class="bal-m">$59,845</td><td class="bal-a">$272,517</td></tr>
           </tbody>
           <tfoot>
             <tr class="total-row">
               <td colspan="3">Ending Balance, 2010</td>
               <td class="bal-m">$59,845</td>
-              <td class="bal-a">$175,208</td>
+              <td class="bal-a">$272,517</td>
             </tr>
           </tfoot>
         </table>
@@ -536,39 +542,83 @@
         <div class="legend-item"><span class="legend-swatch" style="background:#B36A5E;"></span> S&amp;P 500 annual return</div>
         <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Credited with a hypothetical 8% cap and 0% floor</div>
       </div>
-      <p class="example-caption">In down years the capped strategy credits 0% instead of the loss; in up years it's credited the index gain up to 8%, so credited values never exceed 8% and never go below 0%.</p>
+      <p class="example-caption">Assumes a 24% first-year bonus, so the $250,000 premium starts as $310,000 before the first withdrawal. In down years the capped strategy credits 0% instead of the loss; in up years it's credited the index gain up to 8%, so credited values never exceed 8% and never go below 0%.</p>
+    </div>
+
+    <p class="example-transition reveal">Now the same example with a participation rate, 2015&ndash;2025.</p>
+
+    <div class="chart-panel reveal" style="max-width:900px;margin:44px auto 0;">
+      <h3 class="example-title">$250,000, Withdrawing $15,000/yr: Market vs. Annuity, 2015&ndash;2025 (70% Participation Rate)</h3>
+      <div class="returns-table-wrap">
+        <table class="returns-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>S&amp;P 500 Return</th>
+              <th>Credited (70% Participation / 0% Floor)</th>
+              <th>Market Balance</th>
+              <th>Annuity Balance (24% Bonus)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2015</td><td class="pos">+1.38%</td><td class="cred">0.97%</td><td class="bal-m">$238,243</td><td class="bal-a">$297,862</td></tr>
+            <tr><td>2016</td><td class="pos">+11.96%</td><td class="cred">8.37%</td><td class="bal-m">$249,965</td><td class="bal-a">$306,533</td></tr>
+            <tr><td>2017</td><td class="pos">+21.83%</td><td class="cred">15.28%</td><td class="bal-m">$286,242</td><td class="bal-a">$336,151</td></tr>
+            <tr><td>2018</td><td class="neg">-4.38%</td><td class="zero">0.00%</td><td class="bal-m">$259,394</td><td class="bal-a">$321,151</td></tr>
+            <tr><td>2019</td><td class="pos">+31.49%</td><td class="cred">22.04%</td><td class="bal-m">$321,353</td><td class="bal-a">$373,689</td></tr>
+            <tr><td>2020</td><td class="pos">+18.40%</td><td class="cred">12.88%</td><td class="bal-m">$362,722</td><td class="bal-a">$404,893</td></tr>
+            <tr><td>2021</td><td class="pos">+28.71%</td><td class="cred">20.10%</td><td class="bal-m">$447,522</td><td class="bal-a">$468,241</td></tr>
+            <tr><td>2022</td><td class="neg">-18.11%</td><td class="zero">0.00%</td><td class="bal-m">$354,182</td><td class="bal-a">$453,241</td></tr>
+            <tr><td>2023</td><td class="pos">+26.29%</td><td class="cred">18.40%</td><td class="bal-m">$428,398</td><td class="bal-a">$518,973</td></tr>
+            <tr><td>2024</td><td class="pos">+25.02%</td><td class="cred">17.51%</td><td class="bal-m">$516,791</td><td class="bal-a">$592,241</td></tr>
+            <tr><td>2025</td><td class="pos">+17.88%</td><td class="cred">12.52%</td><td class="bal-m">$591,512</td><td class="bal-a">$649,459</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="3">Ending Balance, 2025</td>
+              <td class="bal-m">$591,512</td>
+              <td class="bal-a">$649,459</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item"><span class="legend-swatch" style="background:#B36A5E;"></span> S&amp;P 500 annual return</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Credited with a hypothetical 70% participation rate and 0% floor</div>
+      </div>
+      <p class="example-caption">Assumes the same 24% first-year bonus, so the $250,000 premium starts as $310,000 before the first withdrawal. Even in this mostly positive decade, the bonus is enough to keep the annuity balance ahead of the market scenario every year shown, despite giving up 30% of the index's gain each up year.</p>
     </div>
 
     <div class="chart-panel reveal" style="max-width:900px;margin:44px auto 0;">
-      <h3 class="example-title">$250,000: Market vs. Annuity, 2000&ndash;2010</h3>
+      <h3 class="example-title">$250,000 (Starts at $310,000 with 24% Bonus): Market vs. Annuity, 2000&ndash;2010</h3>
       <svg viewBox="0 0 900 300" fill="none">
         <g stroke="rgba(247,243,234,0.12)" stroke-width="1">
-          <line x1="40" y1="40" x2="880" y2="40"/>
-          <line x1="40" y1="128" x2="880" y2="128"/>
-          <line x1="40" y1="216" x2="880" y2="216"/>
+          <line x1="40" y1="35" x2="880" y2="35"/>
+          <line x1="40" y1="110" x2="880" y2="110"/>
+          <line x1="40" y1="185" x2="880" y2="185"/>
           <line x1="40" y1="260" x2="880" y2="260"/>
         </g>
         <g font-family="IBM Plex Mono" font-size="11" fill="rgba(247,243,234,0.55)">
-          <text x="4" y="44">$250K</text>
-          <text x="10" y="132">$150K</text>
-          <text x="16" y="220">$50K</text>
+          <text x="4" y="39">$300K</text>
+          <text x="10" y="114">$200K</text>
+          <text x="16" y="189">$100K</text>
         </g>
 
         <!-- Annuity line (drawn first, sits behind) -->
-        <path d="M60,53.2 L138,66.4 L216,79.6 L294,79.4 L372,79.2 L450,84.5 L528,84.8 L606,89.2 L684,102.4 L762,104.1 L840,105.8"
+        <path d="M60,38.75 L138,50 L216,61.25 L294,57.5 L372,53.45 L450,55.5 L528,51.29 L606,51.85 L684,63.1 L762,59.5 L840,55.61"
           stroke="#DFC090" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="60" cy="53.2" r="5" fill="#F7F3EA"/>
-        <circle cx="840" cy="105.8" r="5" fill="#DFC090"/>
+        <circle cx="60" cy="38.75" r="5" fill="#F7F3EA"/>
+        <circle cx="840" cy="55.61" r="5" fill="#DFC090"/>
 
         <!-- Market line -->
-        <path d="M60,72 L138,106.6 L216,151.1 L294,136.9 L372,138.3 L450,146.4 L528,144 L606,151.6 L684,200 L762,201 L840,207.3"
+        <path d="M60,100 L138,129.25 L216,167.18 L294,155.11 L372,156.3 L450,163.19 L528,161.1 L606,167.61 L684,208.89 L762,209.69 L840,215.12"
           stroke="#B36A5E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="840" cy="207.3" r="5" fill="#B36A5E"/>
+        <circle cx="840" cy="215.12" r="5" fill="#B36A5E"/>
 
         <g font-family="IBM Plex Mono" font-size="12" fill="#F7F3EA" font-weight="500">
-          <text x="18" y="38">$250K start</text>
-          <text x="770" y="94">$175,208</text>
-          <text x="770" y="222">$59,845</text>
+          <text x="18" y="26">$310K w/ bonus</text>
+          <text x="770" y="44">$272,517</text>
+          <text x="770" y="230">$59,845</text>
         </g>
         <g font-family="IBM Plex Mono" font-size="10" fill="rgba(247,243,234,0.5)">
           <text x="50" y="280">2000</text><text x="360" y="280">2004</text>
@@ -576,10 +626,10 @@
         </g>
       </svg>
       <div class="chart-legend">
-        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Fixed indexed annuity — 0% floor, 8% cap</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Fixed indexed annuity — 24% bonus, 0% floor, 8% cap</div>
         <div class="legend-item"><span class="legend-swatch" style="background:#B36A5E;"></span> S&amp;P 500 — full market exposure</div>
       </div>
-      <p class="example-caption">Both lines assume the same $15,000/year (6%) withdrawals. The annuity line earns 0% instead of the loss in every down year (2000&ndash;2002, 2008) and is credited up to an 8% cap in up years; the market line absorbs each down year in full.</p>
+      <p class="example-caption">Both lines assume the same $15,000/year (6%) withdrawals. The annuity starts at $310,000 after a 24% first-year bonus, earns 0% instead of the loss in every down year (2000&ndash;2002, 2008), and is credited up to an 8% cap in up years; the market line starts at $250,000 and absorbs each down year in full.</p>
     </div>
 
     <div class="example-summary reveal">
@@ -589,10 +639,10 @@
       </div>
       <div class="summary-stat">
         <span class="summary-label">Ending balance, 2010</span>
-        <span class="summary-value"><span style="color:#B36A5E;">$59,845</span> market &nbsp;vs&nbsp; <span style="color:#DFC090;">$175,208</span> annuity</span>
+        <span class="summary-value"><span style="color:#B36A5E;">$59,845</span> market &nbsp;vs&nbsp; <span style="color:#DFC090;">$272,517</span> annuity</span>
       </div>
     </div>
-    <p class="example-disclaimer reveal">Hypothetical example for illustration only, based on published S&amp;P 500 total returns (dividends reinvested) for 2000&ndash;2010. Assumes withdrawals taken at the start of each year, a 0% floor and 8% annual cap for the annuity scenario, and no fees, taxes, or rider costs in either scenario. Actual caps, participation rates, fees, and rider costs vary by carrier and product and will affect real results. Past performance does not guarantee future results, and this is not a projection or quote for any specific product or person.</p>
+    <p class="example-disclaimer reveal">Hypothetical examples for illustration only, based on published S&amp;P 500 total returns (dividends reinvested) for 2000&ndash;2010 and 2015&ndash;2025. Assumes withdrawals of $15,000/year taken at the start of each year, a 24% first-year bonus on the annuity premium ($250,000 becomes $310,000 before the first withdrawal), a 0% floor with either an 8% annual cap or 70% participation rate for the annuity scenarios, and no fees, taxes, or rider costs in either scenario. Actual bonus amounts, caps, participation rates, fees, and rider costs vary by carrier and product and will affect real results — some carriers recover bonus costs through lower caps, longer surrender periods, or a vesting schedule. Past performance does not guarantee future results, and this is not a projection or quote for any specific product or person.</p>
   </div>
 </section>
 
