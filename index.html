@@ -154,17 +154,28 @@
   .kicker-row p{margin-top:16px; color:var(--ink-soft); font-size:1.05rem;}
   .section-navy .kicker-row p{color:rgba(247,243,234,0.75);}
 
-  .trio{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
   .card{
     background:var(--white);
     border-radius:var(--radius);
-    padding:34px 28px;
+    padding:30px 26px;
     box-shadow:var(--shadow);
     border:1px solid rgba(14,38,53,0.06);
   }
-  .card .icon{width:46px; height:46px; margin-bottom:20px;}
-  .card h3{font-size:1.2rem; margin-bottom:12px;}
-  .card p{color:var(--ink-soft); font-size:0.98rem;}
+  .card .icon{width:46px; height:46px; margin-bottom:18px;}
+  .card h3{font-size:1.2rem; margin:0;}
+
+  .stat-banner{
+    max-width:800px; margin:48px auto 0; text-align:center;
+    background:var(--navy-deep); color:var(--ivory);
+    border-radius:20px; padding:36px 40px;
+  }
+  .stat-banner-title{color:var(--ivory); font-size:1.3rem; margin-bottom:16px;}
+  .stat-banner p{font-size:1.02rem; line-height:1.65; color:rgba(247,243,234,0.88);}
+  .stat-banner p + p{margin-top:14px;}
+  .stat-banner .stat-source{
+    display:block; margin-top:18px; font-family:'IBM Plex Mono',monospace;
+    font-size:0.76rem; color:rgba(247,243,234,0.5); text-transform:uppercase; letter-spacing:0.05em;
+  }
 
   /* How it grows / protects — split rows */
   .split-row{
@@ -355,9 +366,8 @@
   .final-cta{
     background:linear-gradient(135deg,var(--navy-deep),var(--navy-soft));
     color:var(--ivory); border-radius:28px; padding:clamp(36px,5vw,64px);
-    display:grid; grid-template-columns:auto 1fr auto; gap:40px; align-items:center;
+    display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center;
   }
-  .agent-avatar{width:88px; height:88px; border-radius:50%; flex-shrink:0;}
   .final-cta h2{color:var(--ivory); font-size:clamp(1.5rem,2.6vw,2rem); margin-bottom:10px;}
   .final-cta p{color:rgba(247,243,234,0.75); max-width:48ch;}
 
@@ -385,7 +395,6 @@
   }
 
   @media (max-width:900px){
-    .trio{grid-template-columns:1fr;}
     .split-row{grid-template-columns:1fr; gap:30px;}
     .split-row.reverse .split-media{order:1;} .split-row.reverse .split-text{order:2;}
     .checklist{grid-template-columns:1fr;}
@@ -404,11 +413,7 @@
 <div class="topbar">
   <div class="wrap">
     <div class="brand">
-      <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
-        <circle cx="16" cy="16" r="15" stroke="#DFC090" stroke-width="1.5"/>
-        <path d="M16 8 L16 24 M9 24 L23 24 M11 24 L11 17 L21 17 L21 24" stroke="#DFC090" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      August So <span style="opacity:.5;font-weight:400;">— Retirement Income Planning</span>
+      August So Annuities and Insurance
     </div>
     <a class="btn btn-primary" href="https://calendly.com/augustso520/retirement-income-tax-planning-call-with-august-so" target="_blank" rel="noopener"><span class="full">Schedule a Call</span></a>
   </div>
@@ -420,7 +425,7 @@
     <div>
       <span class="eyebrow on-dark">For those 5&ndash;15 years from retirement</span>
       <h1>Protect part of what you've built.<br>Keep <em>room to grow</em> the rest.</h1>
-      <p class="hero-sub">A plain-language look at how fixed and fixed indexed annuities can shield a portion of your retirement savings from market drops — without asking you to move everything out of the market.</p>
+      <p class="hero-sub">A plain-language look at how fixed and fixed indexed annuities can shield a portion of your retirement savings from market drops for a set period of time.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://calendly.com/augustso520/retirement-income-tax-planning-call-with-august-so" target="_blank" rel="noopener">
           Schedule Your Free Call
@@ -438,23 +443,44 @@
     <div class="kicker-row reveal">
       <span class="eyebrow">The basics</span>
       <h2>What an annuity actually is</h2>
-      <p>An annuity is a contract between you and an insurance company that shifts a portion of risk away from you and onto the company. Annuities can be both a boost to retirement savings and a dependable source of future income.</p>
+      <p>An annuity is a contract between you and an insurance company that shifts a portion of risk away from you and onto the company. Annuities can be both a boost to retirement savings and a dependable source of future income, providing guarantees for peace of mind while still leaving liquidity available for withdrawals.</p>
     </div>
-    <div class="trio">
-      <div class="card reveal">
-        <svg class="icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="#B08D57" stroke-width="2"/><path d="M6 18h36" stroke="#B08D57" stroke-width="2"/><path d="M14 26h8M14 31h14" stroke="#B08D57" stroke-width="2" stroke-linecap="round"/></svg>
-        <h3>A contract built for your retirement, not the insurance company</h3>
-        <p>Annuities help protect a portion of your nest egg from market volatility, safely setting aside funds for later expenses such as Medicare payments, long-term care planning, inheritance, and tax planning.</p>
+    <div class="stat-banner reveal">
+      <h3 class="stat-banner-title">It's 2026 — Who's Buying Annuities These Days?</h3>
+      <p>Total U.S. annuity sales rose 4% year over year to a record $123.9 billion in the second quarter of 2026, surpassing the previous quarterly high and marking the 11th consecutive quarter of more than $100 billion in sales, according to preliminary results from LIMRA's U.S. Individual Annuity Sales Survey, which represents 84% of the total U.S. annuity market.</p>
+      <p>Year to date, total annuity sales reached $231.3 billion, 2% higher than the first half of 2025 — a new first-half record.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ARE PEOPLE INVESTING IN ANNUITIES ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker-row reveal">
+      <span class="eyebrow">Why now</span>
+      <h2>Why are people investing in annuities?</h2>
+      <p>With interest rates still historically attractive and the stock market sitting near all-time highs, more people are looking to lock in what's available today rather than hope it lasts.</p>
+    </div>
+    <div class="checklist">
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p><strong>Take advantage of historic yields.</strong> Interest crediting rates, caps, and bonuses offered on new contracts are based on today's interest rates, which are well above where they sat for most of the 2010s. While there is general consensus that the Federal Reserve will gradually edge rates downward through 2026, buyers are rushing to participate in today's high interest rate environment.</p>
       </div>
-      <div class="card reveal">
-        <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M24 6l16 8v10c0 11-7 17-16 20-9-3-16-9-16-20V14l16-8z" stroke="#6FA79C" stroke-width="2" stroke-linejoin="round"/><path d="M17 24l5 5 10-11" stroke="#6FA79C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Provides guarantees for peace of mind</h3>
-        <p>In retirement, annuities can offer pension-like cash flow for life, helping to supplement income like Social Security to meet needs and to protect against outliving savings if you live a long time.</p>
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p><strong>Tax-deferred growth.</strong> Interest credited inside an annuity isn't taxed until it's withdrawn, so growth compounds on the full balance each year instead of losing a piece to taxes annually.</p>
       </div>
-      <div class="card reveal">
-        <svg class="icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="#B08D57" stroke-width="2"/><path d="M24 15v9l7 4" stroke="#B08D57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Liquidity available for withdrawals</h3>
-        <p>Annuities also offer flexibility around things like accessing principal or controlling the timing around taking distributions.</p>
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p><strong>The power of compounding.</strong> Growth and deferred taxes both stay invested, so each year's growth builds on a larger base. Annuities can come with a bonus which gives a further head start.</p>
+      </div>
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p><strong>A safe haven at all-time highs.</strong> With markets near record levels, some retirees would rather move a portion of their savings out of harm's way than risk riding out the next pullback.</p>
+      </div>
+      <div class="check-item reveal">
+        <div class="check-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#0E2635" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <p><strong>Predictability for planning.</strong> Known crediting terms and, if elected, guaranteed income make it easier to plan around future expenses instead of guessing at market returns. Annuities have contract periods — they aren't forever — and most retirees choose a contract period between 3 and 10 years.</p>
       </div>
     </div>
   </div>
@@ -469,15 +495,13 @@
         <span class="eyebrow">How it grows</span>
         <h3>Interest tied to an index — without risks, fees, or headaches</h3>
         <p>In a given crediting period, interest may be added to your account based on the movement of a market index, like the S&amp;P 500.</p>
-        <p>In exchange for the downside protection, growth is typically limited by a cap or participation rate.</p>
         <p class="split-subhead">How is growth credited?</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Bonus:</strong> Annuities can come with a bonus when you fund the annuity. Current bonus rates on annuities can be as high as 20&ndash;25% depending on carrier and contract length</span></li>
           <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Fixed rate:</strong> your account is credited with a fixed percentage rate for 1 year, based off of current interest rates, currently around 5&ndash;5.5%</span></li>
           <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Cap:</strong> your account is credited with the growth of the S&amp;P 500 up to the cap</span></li>
           <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Participation rate:</strong> you receive uncapped growth of the S&amp;P 500 at a certain percentage</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Trigger:</strong> if the S&amp;P 500 is positive for the year, you get a set percentage of growth — usually higher than a cap</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>In all three, if the S&amp;P 500 is negative you receive 0% interest. Total safety.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#6FA79C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Trigger:</strong> if the S&amp;P 500 is positive for the year, you get a set percentage of growth</span></li>
         </ul>
       </div>
     </div>
@@ -545,52 +569,52 @@
       <p class="example-caption">Assumes a 24% first-year bonus, so the $250,000 premium starts as $310,000 before the first withdrawal. In down years the capped strategy credits 0% instead of the loss; in up years it's credited the index gain up to 8%, so credited values never exceed 8% and never go below 0%.</p>
     </div>
 
-    <p class="example-transition reveal">Now the same example with a participation rate, 2015&ndash;2025.</p>
+    <p class="example-transition reveal">Now the same example with a participation rate.</p>
 
     <div class="chart-panel reveal" style="max-width:900px;margin:44px auto 0;">
-      <h3 class="example-title">$250,000, Withdrawing $15,000/yr: Market vs. Annuity, 2015&ndash;2025 (70% Participation Rate)</h3>
+      <h3 class="example-title">$250,000, Withdrawing $15,000/yr: Market vs. Annuity, 2000&ndash;2010 (60% Participation Rate)</h3>
       <div class="returns-table-wrap">
         <table class="returns-table">
           <thead>
             <tr>
               <th>Year</th>
               <th>S&amp;P 500 Return</th>
-              <th>Credited (70% Participation / 0% Floor)</th>
+              <th>Credited (60% Participation / 0% Floor)</th>
               <th>Market Balance</th>
               <th>Annuity Balance (24% Bonus)</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>2015</td><td class="pos">+1.38%</td><td class="cred">0.97%</td><td class="bal-m">$238,243</td><td class="bal-a">$297,862</td></tr>
-            <tr><td>2016</td><td class="pos">+11.96%</td><td class="cred">8.37%</td><td class="bal-m">$249,965</td><td class="bal-a">$306,533</td></tr>
-            <tr><td>2017</td><td class="pos">+21.83%</td><td class="cred">15.28%</td><td class="bal-m">$286,242</td><td class="bal-a">$336,151</td></tr>
-            <tr><td>2018</td><td class="neg">-4.38%</td><td class="zero">0.00%</td><td class="bal-m">$259,394</td><td class="bal-a">$321,151</td></tr>
-            <tr><td>2019</td><td class="pos">+31.49%</td><td class="cred">22.04%</td><td class="bal-m">$321,353</td><td class="bal-a">$373,689</td></tr>
-            <tr><td>2020</td><td class="pos">+18.40%</td><td class="cred">12.88%</td><td class="bal-m">$362,722</td><td class="bal-a">$404,893</td></tr>
-            <tr><td>2021</td><td class="pos">+28.71%</td><td class="cred">20.10%</td><td class="bal-m">$447,522</td><td class="bal-a">$468,241</td></tr>
-            <tr><td>2022</td><td class="neg">-18.11%</td><td class="zero">0.00%</td><td class="bal-m">$354,182</td><td class="bal-a">$453,241</td></tr>
-            <tr><td>2023</td><td class="pos">+26.29%</td><td class="cred">18.40%</td><td class="bal-m">$428,398</td><td class="bal-a">$518,973</td></tr>
-            <tr><td>2024</td><td class="pos">+25.02%</td><td class="cred">17.51%</td><td class="bal-m">$516,791</td><td class="bal-a">$592,241</td></tr>
-            <tr><td>2025</td><td class="pos">+17.88%</td><td class="cred">12.52%</td><td class="bal-m">$591,512</td><td class="bal-a">$649,459</td></tr>
+            <tr><td>2000</td><td class="neg">-9.22%</td><td class="zero">0.00%</td><td class="bal-m">$213,333</td><td class="bal-a">$295,000</td></tr>
+            <tr><td>2001</td><td class="neg">-12.08%</td><td class="zero">0.00%</td><td class="bal-m">$174,335</td><td class="bal-a">$280,000</td></tr>
+            <tr><td>2002</td><td class="neg">-22.34%</td><td class="zero">0.00%</td><td class="bal-m">$123,758</td><td class="bal-a">$265,000</td></tr>
+            <tr><td>2003</td><td class="pos">+28.59%</td><td class="cred">17.15%</td><td class="bal-m">$139,857</td><td class="bal-a">$292,875</td></tr>
+            <tr><td>2004</td><td class="pos">+10.74%</td><td class="cred">6.44%</td><td class="bal-m">$138,268</td><td class="bal-a">$295,770</td></tr>
+            <tr><td>2005</td><td class="pos">+4.71%</td><td class="cred">2.83%</td><td class="bal-m">$129,076</td><td class="bal-a">$288,716</td></tr>
+            <tr><td>2006</td><td class="pos">+15.60%</td><td class="cred">9.36%</td><td class="bal-m">$131,864</td><td class="bal-a">$299,336</td></tr>
+            <tr><td>2007</td><td class="pos">+5.41%</td><td class="cred">3.25%</td><td class="bal-m">$123,187</td><td class="bal-a">$293,577</td></tr>
+            <tr><td>2008</td><td class="neg">-37.03%</td><td class="zero">0.00%</td><td class="bal-m">$68,144</td><td class="bal-a">$278,577</td></tr>
+            <tr><td>2009</td><td class="pos">+26.22%</td><td class="cred">15.73%</td><td class="bal-m">$67,076</td><td class="bal-a">$305,038</td></tr>
+            <tr><td>2010</td><td class="pos">+14.94%</td><td class="cred">8.96%</td><td class="bal-m">$59,845</td><td class="bal-a">$316,025</td></tr>
           </tbody>
           <tfoot>
             <tr class="total-row">
-              <td colspan="3">Ending Balance, 2025</td>
-              <td class="bal-m">$591,512</td>
-              <td class="bal-a">$649,459</td>
+              <td colspan="3">Ending Balance, 2010</td>
+              <td class="bal-m">$59,845</td>
+              <td class="bal-a">$316,025</td>
             </tr>
           </tfoot>
         </table>
       </div>
       <div class="chart-legend">
         <div class="legend-item"><span class="legend-swatch" style="background:#B36A5E;"></span> S&amp;P 500 annual return</div>
-        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Credited with a hypothetical 70% participation rate and 0% floor</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Credited with a hypothetical 60% participation rate and 0% floor</div>
       </div>
-      <p class="example-caption">Assumes the same 24% first-year bonus, so the $250,000 premium starts as $310,000 before the first withdrawal. Even in this mostly positive decade, the bonus is enough to keep the annuity balance ahead of the market scenario every year shown, despite giving up 30% of the index's gain each up year.</p>
+      <p class="example-caption">Assumes the same 24% first-year bonus, so the $250,000 premium starts as $310,000 before the first withdrawal. With a 60% participation rate, the annuity still earns 0% instead of the loss in every down year (2000&ndash;2002, 2008), so it ends the decade well ahead of the market despite capturing only 60% of the gain in up years.</p>
     </div>
 
     <div class="chart-panel reveal" style="max-width:900px;margin:44px auto 0;">
-      <h3 class="example-title">$250,000 (Starts at $310,000 with 24% Bonus): Market vs. Annuity, 2000&ndash;2010</h3>
+      <h3 class="example-title">$250,000 (Starts at $310,000 with 24% Bonus): Market vs. Annuity, 2000&ndash;2010 (60% Participation Rate)</h3>
       <svg viewBox="0 0 900 300" fill="none">
         <g stroke="rgba(247,243,234,0.12)" stroke-width="1">
           <line x1="40" y1="35" x2="880" y2="35"/>
@@ -605,10 +629,10 @@
         </g>
 
         <!-- Annuity line (drawn first, sits behind) -->
-        <path d="M60,38.75 L138,50 L216,61.25 L294,57.5 L372,53.45 L450,55.5 L528,51.29 L606,51.85 L684,63.1 L762,59.5 L840,55.61"
+        <path d="M60,38.75 L138,50 L216,61.25 L294,40.34 L372,38.17 L450,43.46 L528,35.5 L606,39.82 L684,51.07 L762,31.22 L840,22.98"
           stroke="#DFC090" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         <circle cx="60" cy="38.75" r="5" fill="#F7F3EA"/>
-        <circle cx="840" cy="55.61" r="5" fill="#DFC090"/>
+        <circle cx="840" cy="22.98" r="5" fill="#DFC090"/>
 
         <!-- Market line -->
         <path d="M60,100 L138,129.25 L216,167.18 L294,155.11 L372,156.3 L450,163.19 L528,161.1 L606,167.61 L684,208.89 L762,209.69 L840,215.12"
@@ -616,8 +640,8 @@
         <circle cx="840" cy="215.12" r="5" fill="#B36A5E"/>
 
         <g font-family="IBM Plex Mono" font-size="12" fill="#F7F3EA" font-weight="500">
-          <text x="18" y="26">$310K w/ bonus</text>
-          <text x="770" y="44">$272,517</text>
+          <text x="18" y="20">$310K w/ bonus</text>
+          <text x="740" y="18">$316,025</text>
           <text x="770" y="230">$59,845</text>
         </g>
         <g font-family="IBM Plex Mono" font-size="10" fill="rgba(247,243,234,0.5)">
@@ -626,10 +650,10 @@
         </g>
       </svg>
       <div class="chart-legend">
-        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Fixed indexed annuity — 24% bonus, 0% floor, 8% cap</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#DFC090;"></span> Fixed indexed annuity — 24% bonus, 0% floor, 60% participation rate</div>
         <div class="legend-item"><span class="legend-swatch" style="background:#B36A5E;"></span> S&amp;P 500 — full market exposure</div>
       </div>
-      <p class="example-caption">Both lines assume the same $15,000/year (6%) withdrawals. The annuity starts at $310,000 after a 24% first-year bonus, earns 0% instead of the loss in every down year (2000&ndash;2002, 2008), and is credited up to an 8% cap in up years; the market line starts at $250,000 and absorbs each down year in full.</p>
+      <p class="example-caption">Both lines assume the same $15,000/year (6%) withdrawals. The annuity starts at $310,000 after a 24% first-year bonus, earns 0% instead of the loss in every down year (2000&ndash;2002, 2008), and is credited 60% of the index gain in up years; the market line starts at $250,000 and absorbs each down year in full.</p>
     </div>
 
     <div class="example-summary reveal">
@@ -639,10 +663,10 @@
       </div>
       <div class="summary-stat">
         <span class="summary-label">Ending balance, 2010</span>
-        <span class="summary-value"><span style="color:#B36A5E;">$59,845</span> market &nbsp;vs&nbsp; <span style="color:#DFC090;">$272,517</span> annuity</span>
+        <span class="summary-value"><span style="color:#B36A5E;">$59,845</span> market &nbsp;vs&nbsp; <span style="color:#DFC090;">$316,025</span> annuity</span>
       </div>
     </div>
-    <p class="example-disclaimer reveal">Hypothetical examples for illustration only, based on published S&amp;P 500 total returns (dividends reinvested) for 2000&ndash;2010 and 2015&ndash;2025. Assumes withdrawals of $15,000/year taken at the start of each year, a 24% first-year bonus on the annuity premium ($250,000 becomes $310,000 before the first withdrawal), a 0% floor with either an 8% annual cap or 70% participation rate for the annuity scenarios, and no fees, taxes, or rider costs in either scenario. Actual bonus amounts, caps, participation rates, fees, and rider costs vary by carrier and product and will affect real results — some carriers recover bonus costs through lower caps, longer surrender periods, or a vesting schedule. Past performance does not guarantee future results, and this is not a projection or quote for any specific product or person.</p>
+    <p class="example-disclaimer reveal">Hypothetical examples for illustration only, based on published S&amp;P 500 total returns (dividends reinvested) for 2000&ndash;2010. Assumes withdrawals of $15,000/year taken at the start of each year, a 24% first-year bonus on the annuity premium ($250,000 becomes $310,000 before the first withdrawal), a 0% floor with either an 8% annual cap or 60% participation rate for the annuity scenarios, and no fees, taxes, or rider costs in either scenario. Actual bonus amounts, caps, participation rates, fees, and rider costs vary by carrier and product and will affect real results — some carriers recover bonus costs through lower caps, longer surrender periods, or a vesting schedule. Past performance does not guarantee future results, and this is not a projection or quote for any specific product or person.</p>
   </div>
 </section>
 
@@ -736,7 +760,7 @@
       </details>
       <details class="reveal">
         <summary>Are annuities insured like a bank account? <span class="plus"></span></summary>
-        <p>No. Annuities are not FDIC or NCUA insured. Guarantees are backed solely by the claims-paying ability and financial strength of the issuing insurance company — not by any bank or government agency.</p>
+        <p>No. Annuities are not FDIC or NCUA insured. Guarantees are backed solely by the claims-paying ability and financial strength of the issuing insurance company — not by any bank or government agency. We only offer annuities from A-rated insurance companies.</p>
       </details>
       <details class="reveal">
         <summary>Do I have to move all of my retirement savings? <span class="plus"></span></summary>
@@ -754,11 +778,6 @@
 <section class="section-ivory-dim">
   <div class="wrap">
     <div class="final-cta reveal">
-      <svg class="agent-avatar" viewBox="0 0 100 100" fill="none">
-        <circle cx="50" cy="50" r="49" fill="#173B4F"/>
-        <circle cx="50" cy="42" r="16" fill="#DFC090"/>
-        <path d="M18 88c4-20 20-30 32-30s28 10 32 30" fill="#DFC090" opacity="0.85"/>
-      </svg>
       <div>
         <h2>Let's talk through your numbers.</h2>
         <p>I'm August So, an insurance professional licensed in AZ, TX, FL, and ND, focused on retirement income and annuity planning. Book a short Zoom call — no cost, no obligation, just a clear look at your options.</p>
